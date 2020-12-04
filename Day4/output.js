@@ -122,7 +122,7 @@ const checkCredentials = (passportCredentialsList) => {
       if (numberOfCreds < 7) {
           return
       }
-      if (credentialsToCheck.every(cred => !passport.includes(cred))) {
+      if (!credentialsToCheck.every(cred => passport.includes(cred))) {
         return
       }  
       if (checkCredentials(passportCreds)) valids++ 
